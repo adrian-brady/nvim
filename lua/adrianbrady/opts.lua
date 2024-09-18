@@ -14,12 +14,12 @@ vim.opt.number = true
 --  Experiment for yourself to see if you like it!
 -- vim.opt.relativenumber = true
 
-vim.opt.mouse = 'a' -- Enable mouse mode, can be useful for resizing splits for example!
+vim.opt.mouse = "a" -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.tabstop = 4
 vim.opt.relativenumber = true
 vim.opt.shiftwidth = 4
 vim.opt.showmode = false -- Don't show the mode, since it's already in the status line
-vim.opt.clipboard = 'unnamedplus' -- Sync clipboard between OS and Neovim. See `:help 'clipboard'`
+vim.opt.clipboard = "unnamedplus" -- Sync clipboard between OS and Neovim. See `:help 'clipboard'`
 vim.opt.breakindent = true -- Enable break indent
 vim.opt.undofile = true -- Save undo history
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
@@ -38,10 +38,10 @@ vim.opt.splitbelow = true
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
-vim.opt.inccommand = 'split'
+vim.opt.inccommand = "split"
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
@@ -54,4 +54,4 @@ vim.opt.scrolloff = 10
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
-vim.opt.colorcolumn = '90'
+vim.opt.colorcolumn = "90"
