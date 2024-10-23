@@ -1,7 +1,7 @@
 -- Options for Neovim
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -16,9 +16,9 @@ vim.opt.number = true
 
 vim.opt.mouse = "a" -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.expandtab = true
-vim.opt.tabstop = 4
+vim.opt.tabstop = 2
 vim.opt.relativenumber = true
-vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 2
 vim.opt.showmode = false -- Don't show the mode, since it's already in the status line
 vim.opt.clipboard = "unnamedplus" -- Sync clipboard between OS and Neovim. See `:help 'clipboard'`
 vim.opt.breakindent = true -- Enable break indent
