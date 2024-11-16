@@ -13,7 +13,15 @@ return {
 
 			-- `neodev` configures Lua LSP for your Neovim config, runtime and plugins
 			-- used for completion, annotations and signatures of Neovim apis
-			{ "folke/neodev.nvim", opts = {} },
+			{
+				"folke/lazydev.nvim",
+				opts = {
+					library = {
+						"LazyVim",
+						{ path = "~/.config/wezterm/types" },
+					},
+				},
+			},
 		},
 		config = function()
 			-- Brief aside: **What is LSP?**
@@ -234,6 +242,11 @@ return {
 							},
 							-- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
 							-- diagnostics = { disable = { 'missing-fields' } },
+						},
+						workspace = {
+							library = {
+								vim.fn.expand("~/.config/wezterm/types"),
+							},
 						},
 					},
 				},

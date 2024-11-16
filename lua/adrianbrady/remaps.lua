@@ -55,3 +55,5 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "delete into void" }
 vim.keymap.set("n", "<leader>cw", "<cmd>copen<CR>", { desc = "Quickfix List Open" })
 vim.keymap.set("n", "<leader>cn", "<cmd>cn<CR>", { desc = "Quickfix Next" })
 vim.keymap.set("n", "<leader>cp", "<cmd>cp<CR>", { desc = "Quickfix Previous" })
+
+vim.keymap.set("i", "jk", "<ESC>")

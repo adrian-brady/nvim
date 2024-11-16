@@ -4,22 +4,13 @@ return {
 		-- change the command in the config to whatever the name of that colorscheme is.
 		--
 		-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-		-- 'folke/tokyonight.nvim',
-		-- 'rebelot/kanagawa.nvim',
-		-- 'ellisonleao/gruvbox.nvim',
-		-- 'nyoom-engineering/nyoom.nvim',
-		-- 'jacoborus/tender.vim',
-		-- 'savq/melange-nvim',
-		-- 'AlexvZyl/nordic.nvim',
-		-- 'rmehri01/onenord.nvim',
-		-- 'rose-pine/neovim',
-		"sainnhe/gruvbox-material",
+		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 10000, -- Make sure to load this before all the other start plugins.
 		config = function()
 			vim.cmd("set termguicolors")
 			vim.g.gruvbox_material_enable_italic = true
-			vim.cmd.colorscheme("gruvbox-material")
+			vim.cmd.colorscheme("tokyonight")
 			vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 			vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 			vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })

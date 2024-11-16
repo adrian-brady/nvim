@@ -26,28 +26,28 @@ wk.add({
 			desc = "Harpoon [M]enu",
 		},
 		{
-			"<C-j>",
+			"<C-n>",
 			function()
 				harpoon:list():select(1)
 			end,
 			desc = "Harpoon select 1",
 		},
 		{
-			"<C-n>",
+			"<C-m>",
 			function()
 				harpoon:list():select(2)
 			end,
 			desc = "Harpoon select 2",
 		},
 		{
-			"<C-i>",
+			"<C-,>",
 			function()
 				harpoon:list():select(3)
 			end,
 			desc = "Harpoon select 3",
 		},
 		{
-			"<C-q>",
+			"<C-.>",
 			function()
 				harpoon:list():select(4)
 			end,
@@ -61,14 +61,14 @@ wk.add({
 			desc = "Harpoon select 5",
 		},
 		{
-			"<C-S-P>",
+			"<C-[>",
 			function()
 				harpoon:list():prev()
 			end,
 			desc = "Harpoon select 5",
 		},
 		{
-			"<C-S-N>",
+			"<C-]>",
 			function()
 				harpoon:list():next()
 			end,
