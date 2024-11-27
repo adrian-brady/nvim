@@ -18,6 +18,7 @@ return {
 			require("mini.surround").setup()
 
 			require("mini.files").setup()
+			require("mini.ai").setup()
 
 			-- Simple and easy statusline.
 			--  You could remove this setup call if you don't like it,
