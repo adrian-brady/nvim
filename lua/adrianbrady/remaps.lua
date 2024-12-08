@@ -20,6 +20,22 @@ vim.keymap.set("n", "<C-f>", "<cmd>!tmux neww tmux-sessionizer<CR>")
 -- Diagnostic Keymaps
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- Duplicate a line and comment out the first line
+vim.keymap.set("n", "yc", "yygccp")
+
+vim.keymap.set("n", "<C-c>", "ciw")
+
+vim.keymap.set("n", "H", "^")
+vim.keymap.set("n", "L", "^")
+
+-- moving lines/blocks in visual mode with indenting.
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+vim.keymap.set("n", "gy", "`[v`]", { desc = "Select recently pasted, yanked or changed text" })
+
+-- Fun fact :%y will yank a whole file
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
