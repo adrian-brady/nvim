@@ -1,27 +1,23 @@
 return {
-	"luukvbaal/statuscol.nvim",
-	config = function()
-		vim.api.nvim_set_hl(0, "SignColumn", {})
-		local builtin = require("statuscol.builtin")
-		require("statuscol").setup({
-			-- configuration goes here, for example:
-			relculright = true,
-			segments = {
-				{
-					sign = { name = { "Diagnostic" }, maxwidth = 1, auto = false },
-					click = "v:lua.ScSa",
-				},
-				{ text = { builtin.lnumfunc }, click = "v:lua.ScLa", auto = false },
-				{
-					sign = { name = { ".*" }, maxwidth = 1, colwidth = 1, auto = false, wrap = true },
-					click = "v:lua.ScSa",
-				},
-				{
-					sign = { namespace = { "gitsign" }, colwidth = 1, wrap = true },
-					click = "v:lua.ScSa",
-					auto = false,
-				},
+	"folke/snacks.nvim",
+	---@type snacks.Config
+	opts = {
+		---@class snacks.statuscolumn.Config
+		---@field right snacks.statuscolumn.Components
+		---@field enabled? boolean
+		---@field left snacks.statuscolumn.Components
+		statuscolumn = {
+			left = { "mark", "sign" }, -- priority of signs on the left (high to low)
+			right = { "fold", "git" }, -- priority of signs on the right (high to low)
+			folds = {
+				open = false, -- show open fold icons
+				git_hl = false, -- use Git Signs hl for fold icons
 			},
-		})
-	end,
+			git = {
+				-- patterns to match Git signs
+				patterns = { "GitSign", "MiniDiffSign" },
+			},
+			refresh = 50, -- refresh at most every 50ms
+		},
+	},
 }

@@ -28,6 +28,10 @@ vim.keymap.set("n", "<C-c>", "ciw")
 vim.keymap.set("n", "H", "^")
 vim.keymap.set("n", "L", "^")
 
+vim.keymap.set("n", "<leader>eX", "<cmd>source %<CR>", { desc = "Source" })
+vim.keymap.set("n", "<leader>ex", ":.lua<CR>", { desc = "execute lua" })
+vim.keymap.set("v", "<leader>ex", ":lua<CR>", { desc = "execute lua" })
+
 -- moving lines/blocks in visual mode with indenting.
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
