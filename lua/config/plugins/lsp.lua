@@ -85,6 +85,13 @@ return {
       }
       require 'lspconfig'.clangd.setup {}
       require 'lspconfig'.gopls.setup {}
+      require 'lspconfig'.sourcekit.setup {
+        settings = {
+          ['sourcekit'] = {
+            filetypes = { 'swift' },
+          },
+        }
+      }
 
       vim.keymap.set("n", "<space>f", function() vim.lsp.buf.format() end)
 
