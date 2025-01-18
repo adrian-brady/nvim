@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile",
+            "type": "shell",
+            "command": "gcc -g ${relativeFile} -o ${fileBasenameNoExtension}"
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "rm ${fileBasenameNoExtension}"
+        }
+    ]
+}
